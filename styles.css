@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 230%;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: monospace;
+  background: linear-gradient(-225deg, #325d7f, #6d5c7e, #c06c86, #f2727f);
+}
+
+.calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #000;
+  padding: 20px;
+}
+
+.calculator input {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+  font-size: 30px;
+  background-color: #9ec6c2;
+}
+
+/* To create a grid, parent container/element must have display: grid property. You can then you grid-template-columns
+and grid-template-rows to organize the child elements. grid-gap will space out those children elements*/
+.calculator-buttons {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.calc-button {
+  background-color: #4d4d4d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* grid-column and grid-row properties will help you span an element over more than one column or row respectively */
+.is-clear {
+  grid-column: span 3;
+  background-color: #ac3a38;
+}
+
+.is-equals {
+  background-color: #094466;
+}
+.is-zero {
+  grid-column: span 3;
+}
+
+#audio {
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+}
